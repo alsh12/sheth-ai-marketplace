@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "sheth-code-review",
+  "displayName": "Sheth Code Review",
+  "version": "1.0.0",
+  "description": "Severity-ranked code review workflows covering general correctness, security, performance, and pull request review against stated requirements.",
+  "author": {
+    "name": "Sheth Hub",
+    "url": "https://shethhub.com"
+  },
+  "homepage": "https://shethhub.com",
+  "license": "MIT",
+  "keywords": ["code-review", "security-review", "performance-review", "pull-requests"]
+}

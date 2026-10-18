@@ -1,0 +1,26 @@
+name: Validate marketplace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate marketplace and plugin manifests
+        run: python scripts/validate-marketplace.py
+
+      - name: Run unit tests
+        run: python -m unittest discover tests -v
+
+      - name: Run eval harness (mechanical checks)
+        run: python tests/evals/run_evals.py

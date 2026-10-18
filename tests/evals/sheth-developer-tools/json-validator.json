@@ -1,0 +1,18 @@
+{
+  "skill": "json-validator",
+  "input": "{\n  \"id\": 7,\n  \"roles\": [\"admin\", \"editor\",],\n  \"active\": true\n}",
+  "expected_behavior_description": "The input has a trailing comma before the closing bracket of the 'roles' array, which is invalid JSON. The skill must report this as invalid and must NOT claim it is valid JSON.",
+  "pass_criteria": [
+    {
+      "id": "fixture-is-actually-invalid-json",
+      "description": "The input, parsed with a strict JSON parser, actually fails to parse (confirms this fixture tests what it claims to).",
+      "check": "json_is_invalid",
+      "requires_manual_review": false
+    },
+    {
+      "id": "cause-named-is-trailing-comma",
+      "description": "The skill's explanation names 'trailing comma' as the cause, not a generic error.",
+      "requires_manual_review": true
+    }
+  ]
+}

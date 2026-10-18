@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "sheth-ai-marketplace",
+  "owner": {
+    "name": "Sheth Hub",
+    "url": "https://shethhub.com"
+  },
+  "metadata": {
+    "description": "Sheth AI Marketplace: independently-installable Claude Code plugins for developer tooling, code review, and software engineering workflows, published by Sheth Hub.",
+    "version": "1.0.0"
+  },
+  "description": "Sheth AI Marketplace: independently-installable Claude Code plugins for developer tooling, code review, and software engineering workflows, published by Sheth Hub.",
+  "plugins": [
+    {
+      "name": "sheth-developer-tools",
+      "source": "./plugins/sheth-developer-tools",
+      "description": "Structured-data utilities for JSON and XML: formatting, validation, and bidirectional conversion with explicit error reporting and no silent repair.",
+      "version": "1.0.0",
+      "category": "developer-tools",
+      "tags": ["json", "xml", "formatting", "validation", "conversion"]
+    },
+    {
+      "name": "sheth-code-review",
+      "source": "./plugins/sheth-code-review",
+      "description": "Severity-ranked code review workflows covering general correctness, security, performance, and pull request review against stated requirements.",
+      "version": "1.0.0",
+      "category": "code-review",
+      "tags": ["code-review", "security", "performance", "pull-requests"]
+    },
+    {
+      "name": "sheth-engineering",
+      "source": "./plugins/sheth-engineering",
+      "description": "Engineering workflows for .NET, Python, API design, test development, and structured debugging, built around evidence-based, convention-respecting practices.",
+      "version": "1.0.0",
+      "category": "engineering",
+      "tags": ["dotnet", "python", "api", "testing", "debugging"]
+    }
+  ]
+}

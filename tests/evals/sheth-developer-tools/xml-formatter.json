@@ -1,0 +1,18 @@
+{
+  "skill": "xml-formatter",
+  "input": "<root><a>1</a><b>2</b></root>",
+  "expected_behavior_description": "Re-indent the document. The formatted output must still be well-formed XML with the same element structure and text content as the input.",
+  "pass_criteria": [
+    {
+      "id": "fixture-is-well-formed",
+      "description": "The input itself parses as well-formed XML (confirms the fixture is a valid starting point).",
+      "check": "xml_is_well_formed",
+      "requires_manual_review": false
+    },
+    {
+      "id": "output-preserves-structure",
+      "description": "The reformatted output parses to the same tag names and text content as the input.",
+      "requires_manual_review": true
+    }
+  ]
+}

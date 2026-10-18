@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "sheth-engineering",
+  "displayName": "Sheth Engineering",
+  "version": "1.0.0",
+  "description": "Engineering workflows for .NET, Python, API design, test development, and structured debugging, built around evidence-based, convention-respecting practices.",
+  "author": {
+    "name": "Sheth Hub",
+    "url": "https://shethhub.com"
+  },
+  "homepage": "https://shethhub.com",
+  "license": "MIT",
+  "keywords": ["dotnet", "python", "api-development", "testing", "debugging"]
+}

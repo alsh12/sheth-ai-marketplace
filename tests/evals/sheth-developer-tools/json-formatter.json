@@ -1,0 +1,18 @@
+{
+  "skill": "json-formatter",
+  "input": "{\"user\":{\"id\":42,\"tags\":[\"a\",\"b\"],\"active\":true,\"note\":null}}",
+  "expected_behavior_description": "Pretty-print the input with 2-space indentation. The resulting JSON must parse to the exact same value as the input (same keys, same types, same order where order matters for arrays).",
+  "pass_criteria": [
+    {
+      "id": "round-trips-to-same-value",
+      "description": "Parsing the formatted output yields a value equal to parsing the original input.",
+      "check": "json_round_trip",
+      "requires_manual_review": false
+    },
+    {
+      "id": "explanation-states-indent-width",
+      "description": "The skill's reply states the indentation width used.",
+      "requires_manual_review": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill": "json-xml-converter",
+  "input": "{\"job\": {\"name\": \"nightly-sync\", \"tags\": [\"batch\", \"sync\"]}}",
+  "expected_behavior_description": "Convert to XML, stating the mapping convention used (e.g., arrays become repeated sibling elements). The resulting XML must be well-formed and must not silently drop the 'tags' values.",
+  "pass_criteria": [
+    {
+      "id": "fixture-input-is-valid-json",
+      "description": "The input itself parses as valid JSON (confirms the fixture is a valid starting point).",
+      "check": "json_round_trip",
+      "requires_manual_review": false
+    },
+    {
+      "id": "states-mapping-convention",
+      "description": "The skill's reply states the array/element mapping convention used, before or alongside the output.",
+      "requires_manual_review": true
+    },
+    {
+      "id": "states-round-trip-caveat",
+      "description": "The skill's reply does not claim the conversion is lossless in general.",
+      "requires_manual_review": true
+    }
+  ]
+}

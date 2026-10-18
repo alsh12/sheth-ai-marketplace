@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "sheth-developer-tools",
+  "displayName": "Sheth Developer Tools",
+  "version": "1.0.0",
+  "description": "Structured-data utilities for JSON and XML: formatting, validation, and bidirectional conversion with explicit error reporting and no silent repair.",
+  "author": {
+    "name": "Sheth Hub",
+    "url": "https://shethhub.com"
+  },
+  "homepage": "https://shethhub.com",
+  "license": "MIT",
+  "keywords": ["json", "xml", "formatter", "validator", "converter"]
+}

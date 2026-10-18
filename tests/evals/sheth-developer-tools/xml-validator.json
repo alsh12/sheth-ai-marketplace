@@ -1,0 +1,18 @@
+{
+  "skill": "xml-validator",
+  "input": "<root><a>1</a><b>2</root>",
+  "expected_behavior_description": "The input has a mismatched closing tag ('</root>' instead of '</b>' then '</root>'). The skill must report this as not well-formed, and must NOT claim it is well-formed.",
+  "pass_criteria": [
+    {
+      "id": "fixture-is-actually-malformed",
+      "description": "The input actually fails well-formedness parsing (confirms this fixture tests what it claims to).",
+      "check": "xml_is_malformed",
+      "requires_manual_review": false
+    },
+    {
+      "id": "cause-named-is-mismatched-tag",
+      "description": "The skill's explanation names the specific mismatched/unclosed tag, not a generic error.",
+      "requires_manual_review": true
+    }
+  ]
+}
