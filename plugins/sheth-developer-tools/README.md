@@ -30,3 +30,6 @@ explicit about what it will and will not silently change.
 See each skill's `SKILL.md` for its input/output contract, and its
 `reference.md` for worked examples. Shared conventions used across every
 skill in this plugin live in `docs/shared-conventions.md`.
+
+
+Check more details at https://shethhub.com
