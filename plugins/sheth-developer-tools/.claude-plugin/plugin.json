@@ -9,7 +9,7 @@
     "url": "https://shethhub.com"
   },
   "homepage": "https://shethhub.com",
-  "icon": "🛠️",
+  "icon": "assets/icon.png",
   "license": "MIT",
   "keywords": ["json", "xml", "formatter", "validator", "converter"]
 }
